@@ -24,7 +24,13 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/")
 public class NdskSqlController {
-    public final static String TEMP_FILE_PATH = "src/main/resources/static/temp/";
+
+/*    static {
+        System.out.println(NdskSqlController.class.getClassLoader().getResource("").getPath());
+    }*/
+
+
+    public final static String TEMP_FILE_PATH = NdskSqlController.class.getClassLoader().getResource("").getPath() + "/static/temp/";
 
     @Autowired
     private NdskSqlService ndskSqlService;
