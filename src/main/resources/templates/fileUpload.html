@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ndsk sql</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/ndsk_sql.css">
+</head>
+<body>
+<br><br>
+<div class="container">
+    <div id="div-form">
+        <p th:if="${format != null && format}">Please update .xlsx file</p><br>
+
+        <form action="/excelToSql" method="post" enctype="multipart/form-data">
+            <input type="file" class="form-control" name="file_ndsk_excel">
+            <label>
+                File format:&nbsp;&nbsp;<input type="radio" name="file-format" checked>&nbsp;.xlsx
+            </label>
+            <div class="form-inline">
+                <label for="table_name">Table name: </label>
+                <input type="text" id="table_name" class="form-control" name="tableName">
+            </div>
+            <input type="submit" class="form-control" value="Upload">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+START TRANSACTION;
+
+INSERT INTO `customer` () VALUES
+(),
+(),
+();
+
+COMMIT;
