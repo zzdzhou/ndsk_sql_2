@@ -25,12 +25,12 @@ import java.io.IOException;
 @RequestMapping("/")
 public class NdskSqlController {
 
-    static {
+    /*static {
         System.out.println(NdskSqlController.class.getClassLoader().getResource("").getPath());
-    }
+    }*/
 
-    public final static String TEMP_FILE_PATH = /*NdskSqlController.class.getClassLoader().getResource("").getPath() + */
-            "static/temp/";
+    public final static String TEMP_FILE_PATH = /*NdskSqlController.class.getClassLoader().getResource("").getPath() +*/
+            "/root/jack/webapp/temp/ndsk_sql_2/";
 
     @Autowired
     private NdskSqlService ndskSqlService;
