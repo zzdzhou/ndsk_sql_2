@@ -29,7 +29,7 @@ public class NdskSqlController {
         System.out.println(NdskSqlController.class.getClassLoader().getResource("").getPath());
     }
 
-    public final static String TEMP_FILE_PATH = NdskSqlController.class.getClassLoader().getResource("./").getPath() + "static/temp/";
+    public final static String TEMP_FILE_PATH = NdskSqlController.class.getClassLoader().getResource("").getPath() + "static/temp/";
 
     @Autowired
     private NdskSqlService ndskSqlService;
